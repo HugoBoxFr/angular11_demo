@@ -1,0 +1,43 @@
+#demo {
+    height: calc(100vh - 105px);
+    overflow-y: scroll;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feature-card {
+    margin-bottom: 35px;
+    
+    a {
+        text-decoration: none;
+        color: black;
+        
+        i {
+            font-size: 25px;
+            text-shadow: 1px 1px 1px #ABABAB;
+        }
+    }
+
+    .card-header {
+        padding: 2rem 1.25rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .card-title {
+        color: white;
+    }
+    
+    .card {
+        border-radius: .5rem;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    }
+    
+    :hover .card {
+        box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    }
+}

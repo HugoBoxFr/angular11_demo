@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-2" *ngFor="let directive of directives">
+          <div class="card bg-light mb-3">
+            <a routerLink="/directives/{{ directive.link }}">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-12">
+                    <h5 class="card-title" [style.color]='directive.color'>{{ directive.name }}</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">{{ directive.description }}</p>
+              </div>
+            </a>
+          </div>
+        </div> 
+    </div>
+</div>

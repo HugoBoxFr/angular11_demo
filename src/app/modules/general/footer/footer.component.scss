@@ -1,0 +1,29 @@
+.footer {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255,255,255,.5);
+
+    p {
+        margin-bottom: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgba(255,255,255,.5);
+
+        &:hover {
+            color: rgba(255,255,255,.75);
+        }
+
+        i {
+            font-size: 20px;
+        }
+    }
+}

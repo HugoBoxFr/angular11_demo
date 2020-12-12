@@ -1,0 +1,59 @@
+
+<div class="container pt-5">
+    <div class="ngif">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h4>*ngIf</h4>
+            </div>
+        </div>
+    
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="What's your name ?" #userName (keyup.enter)="addName(userName.value)" (keyup)="testName(userName.value)">
+                <div class="form-btn">
+                    <button class="btn btn-primary" (click)="addName(userName.value)" [disabled]="nameInput">Enter</button>
+                    <button class="btn btn-danger" (click)="resetName()">Reset</button>
+                </div>
+                
+                <div *ngIf="name" class="name-content">
+                    <h5>Welcome {{ name }},</h5>
+                    <p>This text appears because you entered your name. 
+                    <br>Click on reset and it will disappear.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ngfor">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h4>*ngFor</h4>
+            </div>
+        </div>
+    
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <input type="number" class="form-control" placeholder="How old are you ?" #userAge (keyup.enter)="addAge(userAge.value)">
+                <div class="form-btn">
+                    <button class="btn btn-primary" (click)="addAge(userAge.value)">Enter</button>
+                    <button class="btn btn-danger" (click)="resetAge()">Reset</button>
+                </div>
+
+                <div class="birthday">
+                    <div *ngIf="age > 1">
+                        <h5>Hey {{ age }} years old ! Congrats !</h5>
+                        <p>Here are {{ age }} birthday cakes for you.</p>
+                    </div>
+
+                    <div *ngIf="age == 1">
+                        <h5>Hey {{ age }} year old ! Congrats !</h5>
+                        <p>Here is a birthday cake for you.</p>
+                    </div>
+
+                    <i class="fas fa-birthday-cake" *ngFor="let birthday of birthdays" ></i>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+.ngif, .ngFor {
+    margin-bottom: 20px;
+}
+
+.form-btn {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+        margin-left: 5px;
+    }
+}
+
+h4 {
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+
+.name-content {
+    text-align: center;
+}
+
+.birthday {
+    text-align: center;
+
+    i {
+        margin: 2px;
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,25 @@
+<div class="container-fluid" id="demo">
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-md-4 feature-card" *ngFor="let feature of features">
+                <a routerLink="/{{ feature.link }}">
+                  <div class="card">
+                        <div class="card-header" [style.background]="'url(' + feature.image + ')'">
+                            <i class="{{ feature.icon }} icon" [style.color]="feature.color"></i>
+                        </div>
+        
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h5 [style.color]="feature.color">{{ feature.name }}</h5>
+                            </div>
+        
+                            <hr>
+        
+                            <p class="card-text">{{ feature.description }}</p>
+                        </div>
+                  </div>
+                </a>
+            </div>
+    </div>
+    </div>
+</div>
