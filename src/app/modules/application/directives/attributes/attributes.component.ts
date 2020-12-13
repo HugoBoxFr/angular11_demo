@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AttributesComponent implements OnInit {
 
+  title: string = "Attributes directives";
+
+  styleExp: string = 'italic';
+  sizeExp: number = 20;
+  weightExp: number = 500;
+  colorExp: string = 'red';
+  
+  text: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addText(text: any) {
+    this.text = text;
   }
 
 }

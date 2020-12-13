@@ -5,10 +5,20 @@ import { DirectivesRoutingModule } from './directives-routing.module';
 import { StructuralsComponent } from './structurals/structurals.component';
 import { AttributesComponent } from './attributes/attributes.component';
 import { FormsModule } from '@angular/forms';
+import { CustomsComponent } from './customs/customs.component';
+import { CustomPDirective } from './customs/custom-p.directive';
+import { CustomBtnDirective } from './customs/custom-btn.directive';
+import { CustomImgDirective } from './customs/custom-img.directive';
 
 
 @NgModule({
-  declarations: [DirectivesComponent, StructuralsComponent, AttributesComponent],
+  declarations: [
+    DirectivesComponent, 
+    StructuralsComponent, 
+    AttributesComponent, 
+    CustomsComponent, 
+    CustomPDirective, 
+    CustomBtnDirective, CustomImgDirective],
   imports: [
     CommonModule,
     DirectivesRoutingModule,

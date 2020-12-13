@@ -1,1 +1,63 @@
-<p>attributes works!</p>
+<div class="container pt-5">
+    <h3>{{ title }}</h3>
+    
+    <div class="ngclass">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h4>ngClass: binding DOM element & Css file</h4>
+            </div>
+        </div>
+    
+        <div class="row justify-content-center">
+            <div class="col-md-6 ngclass-content">
+                <div class="col-md-6">
+                    <p [ngClass]="'one'">Using Css class one</p>
+                    <p [ngClass]="'two'">Using Css class two</p>
+                    <p [ngClass]="'three'">Using Css class three</p>
+                    <p [ngClass]="'four'">Using Css class four</p>
+                </div>
+
+                <div class="col-md-6">                    
+                    <p [ngClass]="'one two'">Using Css classes one & two</p>
+                    <p [ngClass]="'two three'">Using Css classes two & three</p>
+                    <p [ngClass]="'three four'">Using Css classes three & four</p>
+                    <p [ngClass]="'one two three four'">Using Css classes one, two, three & four</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ngstyle">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h4>ngStyle: binding inline Css with code</h4>
+            </div>
+        </div>
+    
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <p>Principium autem unde <span [ngStyle]="{'font-style': styleExp}"><strong>latius se funditabat</strong></span>, emersit ex negotio tali. 
+                    Chilo ex vicario et coniux eius <span [ngStyle]="{'font-size.px': sizeExp}">Maxima nomine</span>, questi apud Olybrium ea tempestate urbi praefectum, 
+                    vitamque suam venenis <span [ngStyle]="{'font-weight': weightExp}">petitam adseverantes</span> inpetrarunt ut hi, quos suspectati sunt, ilico rapti conpingerentur in vincula, 
+                    organarius <span [ngStyle]="{'color': colorExp}">Sericus et Asbolius</span> palaestrita et aruspex Campensis.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ngmodel">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h4>ngModel: binding DOM element with code</h4>
+            </div>
+        </div>
+    
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Tell me something..." #userText (keyup)="addText(userText.value)">
+
+                {{ text }}
+            </div>
+        </div>
+    </div>
+</div>

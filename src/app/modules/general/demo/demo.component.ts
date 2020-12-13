@@ -15,7 +15,7 @@ export class DemoComponent implements OnInit {
         {
           name: 'Directives',
           image: 'https://via.placeholder.com/286x80',
-          description: 'Structural & attribute directives',
+          description: 'Structural, attribute & custom',
           icon: 'fa fa-arrow-right',
           link: 'directives',
           color: 'red'
@@ -45,9 +45,9 @@ export class DemoComponent implements OnInit {
           color: 'black'
         },
         {
-          name: 'Routeur',
+          name: 'Router',
           image: 'https://via.placeholder.com/286x80',
-          description: 'Data sharing',
+          description: 'Navigation',
           icon: 'fas fa-sitemap',
           link: 'router',
           color: 'blue'
@@ -71,7 +71,7 @@ export class DemoComponent implements OnInit {
         {
           name: 'Authentication',
           image: 'https://via.placeholder.com/286x80',
-          description: 'Api',
+          description: 'Firebase',
           icon: 'fas fa-user',
           link: 'authentication',
           color: 'lime'

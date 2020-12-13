@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-directives',
   templateUrl: './directives.component.html',
@@ -15,7 +16,7 @@ export class DirectivesComponent implements OnInit {
       {
         name: 'Structural directives',
         image: 'https://via.placeholder.com/286x80',
-        description: '*ngIf *ngFor',
+        description: '*ngIf *ngFor *ngSwitch',
         icon: 'fa fa-arrow-right',
         link: 'structurals',
         color: 'red'
@@ -23,9 +24,17 @@ export class DirectivesComponent implements OnInit {
       {
         name: 'Attribute directives',
         image: 'https://via.placeholder.com/286x80',
-        description: 'Attribute directives',
+        description: 'ngClass ngStyle ngModel',
         icon: 'fa fa-arrow-right',
         link: 'attributes',
+        color: 'red'
+      },
+      {
+        name: 'Custom directives',
+        image: 'https://via.placeholder.com/286x80',
+        description: 'Create own directives',
+        icon: 'fa fa-arrow-right',
+        link: 'customs',
         color: 'red'
       }
     ];

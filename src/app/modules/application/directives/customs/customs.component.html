@@ -1,0 +1,26 @@
+<div class="container pt-5">
+    <h3>{{ title }}</h3>
+    
+    <div class="ngif">   
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <p>This paragraph is a normal one.</p>
+                <p appCustomPDirective>This one uses a custom directive.</p>
+                <br>
+                <button appCustomBtnDirective 
+                    data-container="body" 
+                    data-toggle="popover" 
+                    data-placement="right"
+                    title="Custom Directive & PopperJs"
+                    data-content="This button uses another custom directive." 
+                    data-trigger="focus"
+                >Click on me</button>
+                <br><br>
+                <p style="margin-bottom: 0;">A last one on image hover :</p>
+                <img src="../../../../../assets/params/images/logo/angular-icon.svg" alt="custom directive on image" appCustomImg />
+            </div>
+
+              
+        </div>
+    </div>
+</div>
