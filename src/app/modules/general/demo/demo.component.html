@@ -5,12 +5,12 @@
                 <a routerLink="/{{ feature.link }}">
                   <div class="card">
                         <div class="card-header" [style.background]="'url(' + feature.image + ')'">
-                            <i class="{{ feature.icon }} icon" [style.color]="feature.color"></i>
                         </div>
-        
+                        
                         <div class="card-body">
                             <div class="card-title">
                                 <h5 [style.color]="feature.color">{{ feature.name }}</h5>
+                                <i class="{{ feature.icon }} icon" [style.color]="feature.color"></i>
                             </div>
         
                             <hr>

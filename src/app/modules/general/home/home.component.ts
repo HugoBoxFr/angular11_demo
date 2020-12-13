@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToDemo() {
+  goToDemo(): void {
     const link = 'demo';
     this.route.navigate([link]);
   }

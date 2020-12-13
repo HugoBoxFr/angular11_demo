@@ -13,12 +13,14 @@ import { CustomImgDirective } from './customs/custom-img.directive';
 
 @NgModule({
   declarations: [
-    DirectivesComponent, 
-    StructuralsComponent, 
-    AttributesComponent, 
-    CustomsComponent, 
-    CustomPDirective, 
-    CustomBtnDirective, CustomImgDirective],
+    DirectivesComponent,
+    StructuralsComponent,
+    AttributesComponent,
+    CustomsComponent,
+    CustomPDirective,
+    CustomBtnDirective,
+    CustomImgDirective
+  ],
   imports: [
     CommonModule,
     DirectivesRoutingModule,

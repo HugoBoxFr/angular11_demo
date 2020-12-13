@@ -9,53 +9,53 @@ export class StructuralsComponent implements OnInit {
   @ViewChild('userName') inputName: any;
   @ViewChild('userAge') inputAge: any;
 
-  title: string = "Structural Directives"
+  title = 'Structural Directives';
 
-  name: string = '';
-  nameInput: boolean = true;
+  name = '';
+  nameInput = true;
 
-  age: number = 0;
+  age = 0;
   birthdays: any[] = [];
 
-  color: string = '';
+  color = '';
   colors: any = ['blue', 'red', 'yellow', 'pink', 'orange', 'green', 'black'];
 
-  constructor() { 
+  constructor() {
   }
-  
+
   ngOnInit(): void {
   }
 
-  addName(name: string) {
-    this.name = name;
+  addName(name: string): string {
+    return this.name = name;
   }
 
-  resetName() {
+  resetName(): void {
     this.name = '';
     this.inputName.nativeElement.value = '';
     this.nameInput = true;
   }
 
-  testName(name: any) {
-    name.length > 0 ? this.nameInput = false : '';
-    name.length === 0 ? this.nameInput = true : '';
+  testName(name: any): void {
+    name.length > 0 ? this.nameInput = false : this.nameInput = true;
+    name.length === 0 ? this.nameInput = true : this.nameInput = false;
   }
 
-  addAge(age: any) {
-    this.age = parseInt(age);
+  addAge(age: any): any {
+    this.age = parseInt(age, 10);
     this.birthdays = [];
     for (let i = 0; i < age; i++) {
       this.birthdays.push(i);
     }
   }
 
-  resetAge() {
+  resetAge(): void {
     this.age = 0;
     this.inputAge.nativeElement.value = '';
     this.birthdays = [];
   }
 
-  getColor(color: string) {
-    this.color = color;
+  getColor(color: string): string {
+    return this.color = color;
   }
 }

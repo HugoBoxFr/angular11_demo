@@ -14,7 +14,7 @@ export class DemoComponent implements OnInit {
       [
         {
           name: 'Directives',
-          image: 'https://via.placeholder.com/286x80',
+          image: './assets/params/images/background/directives.svg',
           description: 'Structural, attribute & custom',
           icon: 'fa fa-arrow-right',
           link: 'directives',

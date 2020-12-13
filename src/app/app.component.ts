@@ -15,10 +15,7 @@ import { slideInAnimation } from './animation';
 export class AppComponent {
   title = 'ng-demo';
 
-  prepareRoute(outlet: RouterOutlet) {
+  prepareRoute(outlet: RouterOutlet): RouterOutlet {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
-  }
-
-  ngOnInit() {
   }
 }

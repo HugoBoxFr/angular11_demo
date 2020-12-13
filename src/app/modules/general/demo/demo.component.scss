@@ -21,11 +21,13 @@
             text-shadow: 1px 1px 1px #ABABAB;
         }
     }
-
+    
     .card-header {
-        padding: 2rem 1.25rem;
-        display: flex;
-        justify-content: flex-end;
+        border-radius: .5rem .5rem 0 0 !important;
+        padding: 3rem;
+        background-size: cover !important;
+        background-position: center !important;
+        border-bottom: none;
     }
 
     .card-title {
