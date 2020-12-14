@@ -1,85 +1,70 @@
 
-<div class="container pt-5">
+<div class="container pt-5" id="structurals">
     <h3>{{ title }}</h3>
     
-    <div class="ngif">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <h4>*ngIf</h4>
-            </div>
-        </div>
-    
-        <div class="row justify-content-center">
-            <div class="col-md-6">
+    <div class="row">
+        <div class="ngif col-md-4">
+            <h4>*ngIf</h4>
+
+            <div>
                 <input type="text" class="form-control" placeholder="What's your name ?" #userName (keyup.enter)="addName(userName.value)" (keyup)="testName(userName.value)">
                 <div class="form-btn">
                     <button class="btn btn-primary" (click)="addName(userName.value)" [disabled]="nameInput">Enter</button>
                     <button class="btn btn-danger" (click)="resetName()">Reset</button>
                 </div>
                 
-                <div *ngIf="name" class="name-content">
+                <div *ngIf="name" ngClass="name-content">
                     <h5>Welcome {{ name }},</h5>
                     <p>This text appears because you entered your name. 
                     <br>Click on reset and it will disappear.</p>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="ngfor">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <h4>*ngFor</h4>
-            </div>
-        </div>
     
-        <div class="row justify-content-center">
-            <div class="col-md-6">
+        <div class="ngfor col-md-4">
+            <h4>*ngFor</h4>
+        
+            <div>
                 <input type="number" class="form-control" placeholder="How old are you ?" #userAge (keyup.enter)="addAge(userAge.value)">
                 <div class="form-btn">
                     <button class="btn btn-primary" (click)="addAge(userAge.value)">Enter</button>
-                    <button class="btn btn-danger" (click)="resetAge()">Reset</button>
                 </div>
 
                 <div class="birthday">
                     <div *ngIf="age > 1">
-                        <h5>Hey {{ age }} years old ! Congrats !</h5>
-                        <p>Here are {{ age }} birthday cakes for you.</p>
+                        <h5>{{ age }} years old ?!</h5>
+                        <p>All these {{ age }} stars are shining for you.</p>
                     </div>
 
                     <div *ngIf="age == 1">
-                        <h5>Hey {{ age }} year old ! Congrats !</h5>
-                        <p>Here is a birthday cake for you.</p>
+                        <h5>{{ age }} year old ?!</h5>
+                        <p>This star is shining for you.</p>
                     </div>
 
-                    <i class="fas fa-birthday-cake" *ngFor="let birthday of birthdays" ></i>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-
-    <div class="ngswitch">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <h4>*ngSwitch</h4>
+                    <i class="fas fa-star" *ngFor="let birthday of birthdays"></i>
+                </div>    
             </div>
         </div>
     
-        <div class="row justify-content-center">
-            <div class="col-md-6 color-content">
+        <div class="ngswitch col-md-4">
+            <h4>*ngSwitch</h4>
+        
+            <div>
+                <div class="switch-text">
+                    <p>Choose a color :</p>
+                </div>
                 <div class="colors">
                     <div class="pickColor" *ngFor="let color of colors" [style.backgroundColor]="color" #color (click)="getColor(color)"></div>
                 </div>
                 <div [ngSwitch]="color">
-                    <div *ngSwitchCase="'blue'"><p>Like the <span [style.color]="color"><strong>blue, blue sky</strong></span>.</p></div>
-                    <div *ngSwitchCase="'red'"><p>Burning like <span [style.color]="color"><strong>fire</strong></span> !</p></div>
-                    <div *ngSwitchCase="'yellow'"><p><span [style.color]="color"><strong>Sun</strong></span> is shining.</p></div>
-                    <div *ngSwitchCase="'pink'"><p>Don't think of a <span [style.color]="color"><strong>pink elephant</strong></span>.</p></div>
-                    <div *ngSwitchCase="'orange'"><p>Can I have some <span [style.color]="color"><strong>juice</strong></span> ?</p></div>
-                    <div *ngSwitchCase="'green'"><p>"Barefoot on the <span [style.color]="color"><strong>grass</strong></span>... "<i class="fas fa-music"></i></p></div>
-                    <div *ngSwitchCase="'black'"><p>Why so <span [style.color]="color"><strong>dark</strong></span> ?</p></div>
-                    <div *ngSwitchDefault>Choose a color.</div>
+                    <div *ngSwitchCase="'blue'"><h5>Like the <span [style.color]="color"><strong>blue, blue sky</strong></span>.</h5></div>
+                    <div *ngSwitchCase="'red'"><h5>Burning like <span [style.color]="color"><strong>fire</strong></span> !</h5></div>
+                    <div *ngSwitchCase="'yellow'"><h5><span [style.color]="color"><strong>Sun</strong></span> is shining.</h5></div>
+                    <div *ngSwitchCase="'pink'"><h5>Don't think of a <span [style.color]="color"><strong>pink elephant</strong></span>.</h5></div>
+                    <div *ngSwitchCase="'orange'"><h5>Can I have some <span [style.color]="color"><strong>juice</strong></span> ?</h5></div>
+                    <div *ngSwitchCase="'green'"><h5>"Barefoot on the <span [style.color]="color"><strong>grass</strong></span>... "<i class="fas fa-music"></i></h5></div>
+                    <div *ngSwitchCase="'black'"><h5>Why so <span [style.color]="color"><strong>dark</strong></span> ?</h5></div>
+                    <div *ngSwitchDefault></div>
                 </div>
             </div>
         </div>

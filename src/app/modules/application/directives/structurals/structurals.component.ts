@@ -7,7 +7,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class StructuralsComponent implements OnInit {
   @ViewChild('userName') inputName: any;
-  @ViewChild('userAge') inputAge: any;
 
   title = 'Structural Directives';
 
@@ -47,12 +46,6 @@ export class StructuralsComponent implements OnInit {
     for (let i = 0; i < age; i++) {
       this.birthdays.push(i);
     }
-  }
-
-  resetAge(): void {
-    this.age = 0;
-    this.inputAge.nativeElement.value = '';
-    this.birthdays = [];
   }
 
   getColor(color: string): string {

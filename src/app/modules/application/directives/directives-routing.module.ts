@@ -6,10 +6,10 @@ import { DirectivesComponent } from './directives.component';
 import { StructuralsComponent } from './structurals/structurals.component';
 
 const routes: Routes = [
-  { path: '', component: DirectivesComponent },
-  { path: 'structurals', component: StructuralsComponent },
-  { path: 'attributes', component: AttributesComponent },
-  { path: 'customs', component: CustomsComponent },
+  { path: '', component: DirectivesComponent, data: {animation: 'DirectivesPage'}, },
+  { path: 'structurals', component: StructuralsComponent, data: {animation: 'StructuralsPage'}, },
+  { path: 'attributes', component: AttributesComponent, data: {animation: 'AttributesPage'}, },
+  { path: 'customs', component: CustomsComponent, data: {animation: 'CustomsPage'}, },
 ];
 
 @NgModule({
