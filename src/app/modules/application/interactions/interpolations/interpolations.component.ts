@@ -8,8 +8,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class InterpolationsComponent implements OnInit {
   @ViewChild('userName') inputName: any;
   
-  title = 'Interactions';
-
   name = '';
   nameInput = true;
 

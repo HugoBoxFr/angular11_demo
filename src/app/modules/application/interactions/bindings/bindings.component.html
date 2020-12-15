@@ -1,0 +1,102 @@
+<div class="pt-3">
+    <div class="jumbotron">
+        <h4 class="display-4">Bindings</h4>
+        <p class="lead">"In Angular, a template is a chunk of HTML. Within a template, you can use special syntax to leverage many of Angular's features."</p>
+        <p class="quote">- Angular.io -</p>
+    </div>
+
+    <div class="row">
+        <div class="property-binding col-md-4">
+            <h5>Property binding</h5>
+
+            <p>Uses [ ] on html properties or directives to set values.</p>
+
+            <div class="card">
+                <h6 class="card-header text-white bg-primary">app.component.html</h6>
+                <div class="card-body">
+                    <p class="card-text">&lt;button &#91;disabled&#93;="buttonDisabled" class="btn btn-success"&gt;Example&lt;/button&gt;</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h6 class="card-header text-white bg-primary">app.component.ts</h6>
+                <div class="card-body">
+                    <p class="card-text">buttonDisabled = true;</p>
+                </div>
+            </div>
+            <button class="btn btn-success" [disabled]="buttonDisabled">Example</button>
+        </div>
+    
+        <div class="event-binding col-md-4">
+            <h5>Event binding</h5>
+        
+            <p>Uses ( ), allows to listen to user actions like click, mousenter...</p>
+
+            <div class="card">
+                <h6 class="card-header text-white bg-primary">app.component.html</h6>
+                <div class="card-body">
+                    <p class="card-text">&lt;button (click)="onSwich()" class="btn btn-warning"&gt;Switch&lt;/button&gt;</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h6 class="card-header text-white bg-primary">app.component.ts</h6>
+                <div class="card-body">
+                    <p class="card-text">light = false;</p>
+                    <p class="card-text">onSwitch() &#123;
+                        <br><span style="margin-left: 20px;">this.light = !this.light;</span>
+                        <br>&#125;
+                    </p>
+                </div>
+            </div>
+            <div class="event">
+                <button class="btn btn-warning" (click)="onSwitch()">Switch</button>
+                <i class="fas fa-lightbulb" [style.color]="light ? 'gold' : ''"></i>
+            </div>
+        </div>
+    
+        <div class="two-way-binding col-md-4 last">
+            <h5>Two-way binding</h5>
+            <p>Uses [( )] (banana in a box). Binds template and code.</p>
+
+            <div class="card">
+                <h6 class="card-header text-white bg-primary">app.module.ts</h6>
+                <div class="card-body">
+                    <p class="card-text">import &#123; FormsModule &#125; from '@angular/forms';</p>
+                    <p class="card-text" style="line-height: 18px;">
+                        &#64;NgModule(&#123;
+                            <br><span style="margin-left: 20px;">...</span>
+                            <br><span style="margin-left: 20px;">imports: [</span>
+                            <br><span style="margin-left: 40px;">...</span>
+                            <br><span style="margin-left: 40px;">FormsModule</span>
+                            <br><span style="margin-left: 20px;">],</span>
+                        <br>&#125;)
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h6 class="card-header text-white bg-primary">app.component.html</h6>
+                <div class="card-body">
+                    <p class="card-text">&lt;input class="form-control" [(ngModel)]="text"&gt;</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h6 class="card-header text-white bg-primary">app.component.ts</h6>
+                <div class="card-body">
+                    <p class="card-text">text = 'Enter a text.';</p>
+                </div>
+            </div>
+
+            <input class="form-control" [(ngModel)]="text">
+
+            <p>Your text: {{ text }}</p>
+
+        </div>
+        
+        <div>
+
+        </div>
+    </div>
+</div>

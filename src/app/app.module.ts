@@ -29,7 +29,7 @@ import { AboutComponent } from './modules/general/about/about.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
