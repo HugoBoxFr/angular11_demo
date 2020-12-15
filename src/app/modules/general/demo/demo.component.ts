@@ -22,7 +22,7 @@ export class DemoComponent implements OnInit {
         },
         {
           name: 'Interactions',
-          image: 'https://via.placeholder.com/286x80',
+          image: './assets/params/images/background/interactions.svg',
           description: 'Interpolation, bindings, input, output',
           icon: 'fa fa-link',
           link: 'interactions',
