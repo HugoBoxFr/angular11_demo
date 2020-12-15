@@ -1,44 +1,43 @@
-<div class="container-fluid" id="directives">
-  <div class="container">
-    <h3>{{ title }}</h3>
+<div class="container" id="directives">
+  <h3>{{ title }}</h3>
+  
+  <ul class="nav nav-pills" id="myPill" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="tab-structural" data-toggle="tab"
+          href="#content-structural"
+          role="tab" aria-controls="content-structural" aria-selected="false">
+          Structurals
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="tab-attribute" data-toggle="tab"
+          href="#content-attribute"
+          role="tab" aria-controls="content-attribute" aria-selected="false">
+          Attributes
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="tab-custom" data-toggle="tab"
+          href="#content-custom"
+          role="tab" aria-controls="content-custom" aria-selected="true">
+          Customs
+        </a>
+    </li>
+  </ul>
     
-    <ul class="nav nav-pills" id="myPill" role="tablist">
-      <li class="nav-item">
-          <a class="nav-link active" id="tab-structural" data-toggle="tab"
-            href="#content-structural"
-            role="tab" aria-controls="content-structural" aria-selected="false">
-            Structurals
-          </a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" id="tab-attribute" data-toggle="tab"
-            href="#content-attribute"
-            role="tab" aria-controls="content-attribute" aria-selected="false">
-            Attributes
-          </a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" id="tab-custom" data-toggle="tab"
-            href="#content-custom"
-            role="tab" aria-controls="content-custom" aria-selected="true">
-            Customs
-          </a>
-      </li>
-    </ul>
-      
-    <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="content-structural"
-        role="tabpanel" aria-labelledby="tab-structural">
-        <app-structurals></app-structurals>
-      </div>
-      <div class="tab-pane fade" id="content-attribute"
-        role="tabpanel" aria-labelledby="tab-attribute">
-        <app-attributes></app-attributes>
-      </div>
-      <div class="tab-pane fade" id="content-custom"
-        role="tabpanel" aria-labelledby="tab-custom">
-        <app-customs></app-customs>
-      </div>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="content-structural"
+      role="tabpanel" aria-labelledby="tab-structural">
+      <app-structurals></app-structurals>
+    </div>
+    <div class="tab-pane fade" id="content-attribute"
+      role="tabpanel" aria-labelledby="tab-attribute">
+      <app-attributes></app-attributes>
+    </div>
+    <div class="tab-pane fade" id="content-custom"
+      role="tabpanel" aria-labelledby="tab-custom">
+      <app-customs></app-customs>
     </div>
   </div>
 </div>
+

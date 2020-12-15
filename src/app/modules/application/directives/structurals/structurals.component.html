@@ -1,67 +1,74 @@
-
-<div class="row pt-3">    
-    <div class="ngif col-md-4">
-        <h4>*ngIf</h4>
-
-        <div>
-            <input type="text" class="form-control" placeholder="What's your name ?" #userName (keyup.enter)="addName(userName.value)" (keyup)="testName(userName.value)">
-            <div class="form-btn">
-                <button class="btn btn-primary" (click)="addName(userName.value)" [disabled]="nameInput">Enter</button>
-                <button class="btn btn-danger" (click)="resetName()">Reset</button>
-            </div>
-            
-            <div *ngIf="name" ngClass="name-content">
-                <h5>Welcome {{ name }},</h5>
-                <p>This text appears because you entered your name. 
-                <br>Click on reset and it will disappear.</p>
-            </div>
-        </div>
+<div class="pt-3">
+    <div class="jumbotron">
+        <h4 class="display-4">Interpolations</h4>
+        <p class="lead">"Dynamically change what appears in an application view, such as displaying a custom greeting that includes the user's name."</p>
+        <p class="quote">- Angular.io -</p>
     </div>
 
-    <div class="ngfor col-md-4">
-        <h4>*ngFor</h4>
+    <div class="row">
+        <div class="ngif col-md-4">
+            <h4>*ngIf</h4>
     
-        <div>
-            <input type="number" class="form-control" placeholder="How old are you ?" #userAge (keyup.enter)="addAge(userAge.value)">
-            <div class="form-btn">
-                <button class="btn btn-primary" (click)="addAge(userAge.value)">Enter</button>
+            <div>
+                <input type="text" class="form-control" placeholder="What's your name ?" #userName (keyup.enter)="addName(userName.value)" (keyup)="testName(userName.value)">
+                <div class="form-btn">
+                    <button class="btn btn-primary" (click)="addName(userName.value)" [disabled]="nameInput">Enter</button>
+                    <button class="btn btn-danger" (click)="resetName()">Reset</button>
+                </div>
+                
+                <div *ngIf="name" ngClass="name-content">
+                    <h5>Welcome {{ name }},</h5>
+                    <p>This text appears because you entered your name. 
+                    <br>Click on reset and it will disappear.</p>
+                </div>
             </div>
-
-            <div class="birthday">
-                <div *ngIf="age > 1">
-                    <h5>{{ age }} years old ?!</h5>
-                    <p>All these {{ age }} stars are shining for you.</p>
-                </div>
-
-                <div *ngIf="age == 1">
-                    <h5>{{ age }} year old ?!</h5>
-                    <p>This star is shining for you.</p>
-                </div>
-
-                <i class="fas fa-star" *ngFor="let birthday of birthdays"></i>
-            </div>    
         </div>
-    </div>
-
-    <div class="ngswitch col-md-4 last">
-        <h4>*ngSwitch</h4>
     
-        <div>
-            <div class="switch-text">
-                <p>Choose a color :</p>
+        <div class="ngfor col-md-4">
+            <h4>*ngFor</h4>
+        
+            <div>
+                <input type="number" class="form-control" placeholder="How old are you ?" #userAge (keyup.enter)="addAge(userAge.value)">
+                <div class="form-btn">
+                    <button class="btn btn-primary" (click)="addAge(userAge.value)">Enter</button>
+                </div>
+    
+                <div class="birthday">
+                    <div *ngIf="age > 1">
+                        <h5>{{ age }} years old ?!</h5>
+                        <p>All these {{ age }} stars are shining for you.</p>
+                    </div>
+    
+                    <div *ngIf="age == 1">
+                        <h5>{{ age }} year old ?!</h5>
+                        <p>This star is shining for you.</p>
+                    </div>
+    
+                    <i class="fas fa-star" *ngFor="let birthday of birthdays"></i>
+                </div>    
             </div>
-            <div class="colors">
-                <div class="pickColor" *ngFor="let color of colors" [style.backgroundColor]="color" #color (click)="getColor(color)"></div>
-            </div>
-            <div [ngSwitch]="color">
-                <div *ngSwitchCase="'blue'"><h5>Like the <span [style.color]="color"><strong>blue, blue sky</strong></span>.</h5></div>
-                <div *ngSwitchCase="'red'"><h5>Burning like <span [style.color]="color"><strong>fire</strong></span> !</h5></div>
-                <div *ngSwitchCase="'yellow'"><h5><span [style.color]="color"><strong>Sun</strong></span> is shining.</h5></div>
-                <div *ngSwitchCase="'pink'"><h5>Don't think of a <span [style.color]="color"><strong>pink elephant</strong></span>.</h5></div>
-                <div *ngSwitchCase="'orange'"><h5>Can I have some <span [style.color]="color"><strong>juice</strong></span> ?</h5></div>
-                <div *ngSwitchCase="'green'"><h5>"Barefoot on the <span [style.color]="color"><strong>grass</strong></span>... "<i class="fas fa-music"></i></h5></div>
-                <div *ngSwitchCase="'black'"><h5>Why so <span [style.color]="color"><strong>dark</strong></span> ?</h5></div>
-                <div *ngSwitchDefault></div>
+        </div>
+    
+        <div class="ngswitch col-md-4 last">
+            <h4>*ngSwitch</h4>
+        
+            <div>
+                <div class="switch-text">
+                    <p>Choose a color :</p>
+                </div>
+                <div class="colors">
+                    <div class="pickColor" *ngFor="let color of colors" [style.backgroundColor]="color" #color (click)="getColor(color)"></div>
+                </div>
+                <div [ngSwitch]="color">
+                    <div *ngSwitchCase="'blue'"><h5>Like the <span [style.color]="color"><strong>blue, blue sky</strong></span>.</h5></div>
+                    <div *ngSwitchCase="'red'"><h5>Burning like <span [style.color]="color"><strong>fire</strong></span> !</h5></div>
+                    <div *ngSwitchCase="'yellow'"><h5><span [style.color]="color"><strong>Sun</strong></span> is shining.</h5></div>
+                    <div *ngSwitchCase="'pink'"><h5>Don't think of a <span [style.color]="color"><strong>pink elephant</strong></span>.</h5></div>
+                    <div *ngSwitchCase="'orange'"><h5>Can I have some <span [style.color]="color"><strong>juice</strong></span> ?</h5></div>
+                    <div *ngSwitchCase="'green'"><h5>"Barefoot on the <span [style.color]="color"><strong>grass</strong></span>... "<i class="fas fa-music"></i></h5></div>
+                    <div *ngSwitchCase="'black'"><h5>Why so <span [style.color]="color"><strong>dark</strong></span> ?</h5></div>
+                    <div *ngSwitchDefault></div>
+                </div>
             </div>
         </div>
     </div>
