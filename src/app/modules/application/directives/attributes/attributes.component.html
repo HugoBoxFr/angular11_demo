@@ -1,41 +1,37 @@
-<div class="container pt-5">
-    <h3>{{ title }}</h3>
+<div class="row pt-3">
+    <div class="ngclass col-md-4">
+        <h4>ngClass: <br>binding DOM & Css file</h4>
 
-    <div class="row">
-        <div class="ngclass col-md-4">
-            <h4>ngClass: <br>binding DOM & Css file</h4>
-    
-            <div>
-                <p [ngClass]="'one'">Using Css class one</p>
-                <p [ngClass]="'two'">Using Css class two</p>
-                <p [ngClass]="'three'">Using Css class three</p>
-                <p [ngClass]="'four'">Using Css class four</p>                    
-                <p [ngClass]="'one two'">Using Css classes one & two</p>
-                <p [ngClass]="'two three'">Using Css classes two & three</p>
-                <p [ngClass]="'three four'">Using Css classes three & four</p>
-                <p [ngClass]="'one two three four'">Using Css classes one, two, three & four</p>
-            </div>
+        <div>
+            <p [ngClass]="'one'">Using Css class one</p>
+            <p [ngClass]="'two'">Using Css class two</p>
+            <p [ngClass]="'three'">Using Css class three</p>
+            <p [ngClass]="'four'">Using Css class four</p>                    
+            <p [ngClass]="'one two'">Using Css classes one & two</p>
+            <p [ngClass]="'two three'">Using Css classes two & three</p>
+            <p [ngClass]="'three four'">Using Css classes three & four</p>
+            <p [ngClass]="'one two three four'">Using Css classes one, two, three & four</p>
         </div>
-    
-        <div class="ngstyle col-md-4">
-            <h4>ngStyle: <br>binding inline Css with code</h4>
+    </div>
 
-            <div>
-                <p>Principium autem unde <span [ngStyle]="{'font-style': styleExp}"><strong>latius se funditabat</strong></span>, emersit ex negotio tali. 
-                    Chilo ex vicario et coniux eius <span [ngStyle]="{'font-size.px': sizeExp}">Maxima nomine</span>, questi apud Olybrium ea tempestate urbi praefectum, 
-                    vitamque suam venenis <span [ngStyle]="{'font-weight': weightExp}">petitam adseverantes</span> inpetrarunt ut hi, quos suspectati sunt, ilico rapti conpingerentur in vincula, 
-                    organarius <span [ngStyle]="{'color': colorExp}">Sericus et Asbolius</span> palaestrita et aruspex Campensis.
-                </p>
-            </div>
+    <div class="ngstyle col-md-4">
+        <h4>ngStyle: <br>binding inline Css with code</h4>
+
+        <div>
+            <p>Principium autem unde <span [ngStyle]="{'font-style': styleExp}"><strong>latius se funditabat</strong></span>, emersit ex negotio tali. 
+                Chilo ex vicario et coniux eius <span [ngStyle]="{'font-size.px': sizeExp}">Maxima nomine</span>, questi apud Olybrium ea tempestate urbi praefectum, 
+                vitamque suam venenis <span [ngStyle]="{'font-weight': weightExp}">petitam adseverantes</span> inpetrarunt ut hi, quos suspectati sunt, ilico rapti conpingerentur in vincula, 
+                organarius <span [ngStyle]="{'color': colorExp}">Sericus et Asbolius</span> palaestrita et aruspex Campensis.
+            </p>
         </div>
-    
-        <div class="ngmodel col-md-4">
-            <h4>ngModel: <br>binding DOM with code</h4>
+    </div>
 
-            <div>
-                <input type="text" class="form-control" placeholder="Tell me something..." #userText (keyup)="addText(userText.value)">
-                {{ text }}
-            </div>
+    <div class="ngmodel col-md-4 last">
+        <h4>ngModel: <br>binding DOM with code</h4>
+
+        <div>
+            <input type="text" class="form-control" placeholder="Tell me something..." #userText (keyup)="addText(userText.value)">
+            {{ text }}
         </div>
     </div>
 </div>

@@ -7,22 +7,22 @@ export const slideInAnimation =
       query(':enter, :leave', [
         style({
           position: 'absolute',
-          top: 55,
+          top: 0,
           left: 0,
           width: '100%',
           transition: 'all 0.5s ease-out',
         })
       ], { optional: true }),
       query(':enter', [
-        style({ top: '-100%' })
+        style({ top: '-500px' })
       ], { optional: true }),
       query(':leave', animateChild(), { optional: true }), 
       group([
         query(':leave', [
-          animate('300ms ease-out', style({ top: '55px', opacity: 0 }))
+          animate('300ms ease-out', style({ top: '0', opacity: 0 }))
         ], { optional: true }),
         query(':enter', [
-          animate('300ms ease-out', style({ top: '55px' }))
+          animate('300ms ease-out', style({ top: '10%' }))
         ], { optional: true })
       ]),
       query(':enter', animateChild(), { optional: true })

@@ -1,20 +1,44 @@
-<div class="container">
-    <div class="row pt-5">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-2" *ngFor="let directive of directives">
-          <div class="card bg-light mb-3">
-            <a routerLink="/directives/{{ directive.link }}">
-              <div class="card-header">
-                <div class="row">
-                  <div class="col-12">
-                    <h5 class="card-title" [style.color]='directive.color'>{{ directive.name }}</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <p class="card-text">{{ directive.description }}</p>
-              </div>
-            </a>
-          </div>
-        </div> 
+<div class="container-fluid" id="directives">
+  <div class="container">
+    <h3>{{ title }}</h3>
+    
+    <ul class="nav nav-pills" id="myPill" role="tablist">
+      <li class="nav-item">
+          <a class="nav-link active" id="tab-structural" data-toggle="tab"
+            href="#content-structural"
+            role="tab" aria-controls="content-structural" aria-selected="false">
+            Structurals
+          </a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="tab-attribute" data-toggle="tab"
+            href="#content-attribute"
+            role="tab" aria-controls="content-attribute" aria-selected="false">
+            Attributes
+          </a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="tab-custom" data-toggle="tab"
+            href="#content-custom"
+            role="tab" aria-controls="content-custom" aria-selected="true">
+            Customs
+          </a>
+      </li>
+    </ul>
+      
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="content-structural"
+        role="tabpanel" aria-labelledby="tab-structural">
+        <app-structurals></app-structurals>
+      </div>
+      <div class="tab-pane fade" id="content-attribute"
+        role="tabpanel" aria-labelledby="tab-attribute">
+        <app-attributes></app-attributes>
+      </div>
+      <div class="tab-pane fade" id="content-custom"
+        role="tabpanel" aria-labelledby="tab-custom">
+        <app-customs></app-customs>
+      </div>
     </div>
+  </div>
 </div>

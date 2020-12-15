@@ -13,6 +13,7 @@ import { DemoComponent } from './modules/general/demo/demo.component';
 import { NotFoundComponent } from './modules/general/not-found/not-found.component';
 import { AboutComponent } from './modules/general/about/about.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

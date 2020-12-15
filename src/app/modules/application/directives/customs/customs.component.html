@@ -1,40 +1,32 @@
-<div class="container pt-5">
-    <h3>{{ title }}</h3>
-    
-    <div class="ngif">   
-        <div class="row">
-            <div class="col-md-4">
-                <h4>This paragraph doesn't use any directive.</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Nisl pretium fusce id velit ut tortor. Ultrices dui sapien eget mi proin. Tristique senectus et netus et malesuada fames. 
-                    Ut porttitor leo a diam sollicitudin tempor. A iaculis at erat pellentesque adipiscing commodo elit. 
-                    Integer quis auctor elit sed vulputate mi sit amet.
-                </p>
-            </div>
-            <div class="col-md-4">
-                <h4>This one uses a simple custom directive.</h4>
-                <p appCustomPDirective>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Nisl pretium fusce id velit ut tortor. Ultrices dui sapien eget mi proin. Tristique senectus et netus et malesuada fames. 
-                    Ut porttitor leo a diam sollicitudin tempor. A iaculis at erat pellentesque adipiscing commodo elit. 
-                    Integer quis auctor elit sed vulputate mi sit amet.
-                </p>
-            </div>
-            <div class="col-md-4">
-                <h4>Other examples of custom directives.</h4>
-                <button appCustomBtnDirective 
-                    data-container="body" 
-                    data-toggle="popover" 
-                    data-placement="right"
-                    title="Custom Directive & PopperJs"
-                    data-content="This button uses another custom directive." 
-                    data-trigger="focus"
-                >Click on me</button>
-                <br><br>
-                <p style="margin-bottom: 0;">A last one on image hover :</p>
-                <img src="../../../../../assets/params/images/logo/angular-icon.svg" alt="custom directive on image" appCustomImg />
-            </div>
-
-              
-        </div>
+<div class="row pt-3">   
+    <div class="col-md-4 custom-div">
+        <h4>This paragraph doesn't use any directive.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Nisl pretium fusce id velit ut tortor. Ultrices dui sapien eget mi proin. Tristique senectus et netus et malesuada fames. 
+            Ut porttitor leo a diam sollicitudin tempor. A iaculis at erat pellentesque adipiscing commodo elit. 
+            Integer quis auctor elit sed vulputate mi sit amet.
+        </p>
+    </div>
+    <div class="col-md-4 custom-div">
+        <h4>This one uses a simple custom directive.</h4>
+        <p appCustomPDirective>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Nisl pretium fusce id velit ut tortor. Ultrices dui sapien eget mi proin. Tristique senectus et netus et malesuada fames. 
+            Ut porttitor leo a diam sollicitudin tempor. A iaculis at erat pellentesque adipiscing commodo elit. 
+            Integer quis auctor elit sed vulputate mi sit amet.
+        </p>
+    </div>
+    <div class="col-md-4 last custom-div">
+        <h4>Other examples of custom directives.</h4>
+        <button appCustomBtnDirective 
+            data-container="body" 
+            data-toggle="popover" 
+            data-placement="right"
+            title="Custom Directive & PopperJs"
+            data-content="This button uses another custom directive." 
+            data-trigger="focus"
+        >Click on me</button>
+        <br><br>
+        <p style="margin-bottom: 0;">A last one on image hover :</p>
+        <img src="../../../../../assets/params/images/logo/angular-icon.svg" alt="custom directive on image" appCustomImg />
     </div>
 </div>

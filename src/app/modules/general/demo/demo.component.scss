@@ -1,6 +1,7 @@
 #demo {
-    height: calc(100vh - 105px);
-    overflow-y: scroll;
+    padding: 100px 0 70px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card-title {

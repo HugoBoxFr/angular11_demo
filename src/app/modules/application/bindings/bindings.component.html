@@ -1,1 +1,67 @@
-<p>bindings works!</p>
+<!-- <div class="container">
+    <div class="row pt-5">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-2" *ngFor="let binding of bindings">
+          <div class="card bg-light mb-3">
+            <a routerLink="/interactions/{{ binding.link }}">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-12">
+                    <h5 class="card-title" [style.color]='binding.color'>{{ binding.name }}</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">{{ binding.description }}</p>
+              </div>
+            </a>
+          </div>
+        </div> 
+    </div>
+</div> -->
+
+<div class="container" id="interactions">
+    <div class="directive-nav">
+      <h3>{{ title }}</h3>
+      
+      <ul class="nav nav-pills" id="myPill" role="tablist">
+        <li class="nav-item">
+           <a class="nav-link active" id="tab-interpolation" data-toggle="tab"
+              href="#content-interpolation"
+              role="tab" aria-controls="content-interpolation" aria-selected="false">
+              Interpolation
+           </a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link" id="tab-binding" data-toggle="tab"
+              href="#content-binding"
+              role="tab" aria-controls="content-binding" aria-selected="false">
+              Bindings
+           </a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link" id="tab-parent-child" data-toggle="tab"
+              href="#content-parent-child"
+              role="tab" aria-controls="content-parent-child" aria-selected="true">
+              Parent-child
+           </a>
+        </li>
+      </ul>
+    </div>
+      
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="content-interpolation"
+        role="tabpanel" aria-labelledby="tab-interpolation">
+        <app-interpolations></app-interpolations>
+      </div>
+      <div class="tab-pane fade" id="content-binding"
+        role="tabpanel" aria-labelledby="tab-binding">
+        2
+      </div>
+      <div class="tab-pane fade" id="content-parent-child"
+        role="tabpanel" aria-labelledby="tab-parent-child">
+        3
+      </div>
+    </div>
+  </div>
+  
+  

@@ -19,8 +19,8 @@ const routes: Routes = [
   },
   {
     path: 'interactions',
-    loadChildren: () => import('./modules/application/bindings/bindings-routing.module')
-    .then(mod => mod.BindingsRoutingModule)
+    loadChildren: () => import('./modules/application/bindings/bindings.module')
+    .then(mod => mod.BindingsModule)
   },
   {
     path: 'forms',
