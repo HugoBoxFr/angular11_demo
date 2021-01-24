@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class BindingsComponent implements OnInit {
   buttonDisabled = true;
   light = false;
-  text = 'Enter a text.';
+  text = '';
 
   constructor() { }
 

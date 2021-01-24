@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class='parent'>
+            <h5>Mother <span class="legend">(helping her child with Math)</span></h5>
+            
+            <div class="question">
+                <p>Choose a multiplication :</p>
+                <div class="parent-question">
+                    <button *ngFor="let q of questions" [disabled]="enableButtons" class="btn btn-danger" (click)="ask(q)">{{ q.question }}</button>
+                </div>
+            </div>
+        </div>
+
+        <app-child [mumQuestion]="question" (answer)="childAnswer = $event"></app-child>
+    </div>
+    
+    <div class="col-md-6">
+        <app-chatbox [question]="question" [answer]="childAnswer" (enableButtons)="enableButtons = $event"></app-chatbox>
+    </div>
+</div>

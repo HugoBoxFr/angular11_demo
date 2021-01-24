@@ -1,0 +1,19 @@
+<div class="chatbox">
+    <h5>Chat Box</h5>
+
+    <div *ngIf="question" class="mom">
+        <p class="author">Mother :</p> 
+        <p>{{ question }}</p>
+    </div>
+
+    <div *ngIf="answer" class="toto">
+        <p class="author">Toto :</p>
+        <p>{{ answer }} ??</p>
+    </div>
+
+    <div *ngIf="momAnswer" class="mom">
+        <p class="author">Mother :</p> 
+        <div *ngIf="loading" class="jumping-dots-loader"> <span></span> <span></span> <span></span> </div>
+        <p>{{ sentence }}</p>
+    </div>
+</div>

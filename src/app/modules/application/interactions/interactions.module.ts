@@ -7,13 +7,19 @@ import { InterpolationsComponent } from './interpolations/interpolations.compone
 import { BindingsComponent } from './bindings/bindings.component';
 import { InputOutputComponent } from './input-output/input-output.component';
 import { FormsModule } from '@angular/forms';
+import { ParentComponent } from './input-output/parent/parent.component';
+import { ChildComponent } from './input-output/child/child.component';
+import { ChatboxComponent } from './input-output/chatbox/chatbox.component';
 
 @NgModule({
   declarations: [
     InteractionsComponent,
     InterpolationsComponent,
     BindingsComponent,
-    InputOutputComponent
+    InputOutputComponent,
+    ParentComponent,
+    ChildComponent,
+    ChatboxComponent
   ],
   imports: [
     CommonModule,

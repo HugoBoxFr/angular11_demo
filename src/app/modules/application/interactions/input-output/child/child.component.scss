@@ -1,0 +1,21 @@
+.child {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+
+    h5 {
+        text-decoration: underline;
+    }
+    
+    .legend {
+        font-style: italic;
+        font-size: 12px;
+    }
+    
+    .answer {
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
